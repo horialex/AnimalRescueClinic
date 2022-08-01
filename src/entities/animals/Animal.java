@@ -1,12 +1,13 @@
 package entities.animals;
 
 import entities.food.AnimalFood;
+import entities.states.HappinessStates;
 
 public abstract class Animal {
     private String name;
     private int age;
     private int weight;
-    private String happinesLevel;
+    private HappinessStates happinesLevel;
     private boolean isHungry;
 
     public abstract void eat(AnimalFood animalFood);
@@ -35,11 +36,11 @@ public abstract class Animal {
         this.weight = weight;
     }
 
-    public String getHappinesLevel() {
+    public HappinessStates getHappinesLevel() {
         return happinesLevel;
     }
 
-    public void setHappinesLevel(String happinesLevel) {
+    public void setHappinesLevel(HappinessStates happinesLevel) {
         this.happinesLevel = happinesLevel;
     }
 

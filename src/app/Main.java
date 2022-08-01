@@ -7,6 +7,7 @@ import entities.adopters.Father;
 import entities.adopters.Girl;
 import entities.animals.Duck;
 import entities.food.DogFood;
+import entities.states.HappinessStates;
 
 public class Main {
 
@@ -24,7 +25,7 @@ public class Main {
         dog.setBreed("Corcitura de labrador");
         dog.setAge(1);
         dog.setWeight(1);
-        dog.setHappinesLevel("Sad");
+        dog.setHappinesLevel(HappinessStates.SAD);
         dog.setHungry(false);
         dog.setScared(true);
 
@@ -46,7 +47,7 @@ public class Main {
 
         DogFood dogFood = new DogFood();
         girl.feedAnimal(dogFood);
-
+        dog.setHappinesLevel(HappinessStates.NEUTRAL);
 
     }
 }
